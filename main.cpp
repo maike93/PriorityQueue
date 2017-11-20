@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    int n = 10;
+    int n = 20000;
     PriorityQueue pq1(n);
 
     Random r(n);
@@ -24,7 +24,7 @@ int main()
     }
 
     //cout << "\nPQ1 enthaelt: " << endl;
-    pq1.ausgeben();
+    //pq1.ausgeben();
 
 
     // Zeit messen
@@ -38,9 +38,9 @@ int main()
     time_t time = ((ende-start)*1000)/CLOCKS_PER_SEC;
     cout << "Zeit zum Extract_Min: " << time << "ms" << endl;
 
-    pqSorted.ausgeben();
+    //pqSorted.ausgeben();
 
-/*
+
     // Aufgabe 2
 
     // Test
@@ -51,10 +51,14 @@ int main()
 
   // testen, wenn Funktionen increase und loeschen funktionieren
     Random r3(n);
+    clock_t start2 = clock();
     for(int i=0; i<n; i++ ) {
         if( i%2 == 0 ) pqSorted.loeschen(i);
         else pqSorted.increase(i, r.give()/2);
     }
+    clock_t ende2 = clock();
+    time_t time2 = ((ende2-start2)*1000)/CLOCKS_PER_SEC;
+    cout << "Zeit zum Extract_Min: " << time2 << "ms" << endl;
     //pqSorted.ausgeben();
 
     int n2 = pqSorted.Size();
@@ -64,5 +68,5 @@ int main()
         pq2.Insert(pqSorted.Extract_Min());
     }
     pq2.ausgeben();
-*/
+
 }
