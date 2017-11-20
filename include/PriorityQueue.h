@@ -9,7 +9,7 @@ class PriorityQueue
     public:
         PriorityQueue();
         PriorityQueue(int l);
-        PriorityQueue(PQElement *e, int l);
+        //PriorityQueue(PQElement *e, int l);
         virtual ~PriorityQueue();
         int Size() {return n;};
         void ausgeben();
